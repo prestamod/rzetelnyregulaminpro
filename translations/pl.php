@@ -1,0 +1,36 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_661c2917f6cf4f9967e1880c724b44a2'] = 'Rzetelny regulamin';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_d065a6f2dc395b03c3560f47eca1e4df'] = 'Moduł dodaje strony stronę regulaminu i polityki prywatności';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_6adf97f83acf6453d4a6a4b1070f3754'] = 'Nie wybrano';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_254f642527b45bc260048e30704edb39'] = 'Konfiguracja';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_4a2bffe7bc36e36e86ad7eab4fa475f8'] = 'Kod użytkownika regulamin';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_037a2bb5a3c43c65339f47155d538f0d'] = 'Wprowadź kod użytkownika regulaminu, jeżeli go nie posiadasz strona z regulaminem, oraz widget nie będą dostępne';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_f50f3a4b9c603eb31c307c1c136ddb0d'] = 'Kod użytkownika do polityki prywatności';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_b565a29b9bb5c9f374c8c243a217ff52'] = 'Wprowadź kod użytkownia polityki prywatności, jeżeli go nie posiadasz strona z polityką prywatności nie będzie dostępna';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_f1f062fde3ff820d45937c08085028b5'] = 'Strona CMS z przekierowaniem do polityki prywatności';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_04e58c9ef0ba4fd382813c22632c9db2'] = 'Strona CMS z przekierowaniem do regulaminu';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_0a7ffe93ec01bd0c96229e2a342c6885'] = 'Kod użytkownika do opinii';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_b216f4c0c0bd2f3e609ae94b11d8eb30'] = 'Wprowadź kod użytkownika do opinii, jeżeli pole pozostawisz puste prośba o opinię nie będzie wysyłana';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_0a4cd3ce6d26ea94d99862a8953e6aaf'] = 'Wyświetl widget';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_93cba07454f06a4a960172bbd6e2a435'] = 'Tak';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_bafd7322c6e97d25b6299b5d6fe8920b'] = 'Nie';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_6654bcd30557d048a577413cf3d4c73d'] = 'Położenie widgetu';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_2f4fc254372ccef8c8861da9231575da'] = 'Po lewej';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_f169da58d8ce776080c84c4debc2067e'] = 'Po prawej';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_87afce11749083f3f9458a0cccf0e7d3'] = 'Ilość dni do wyłania prośby o opiię';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_e4da3b7fbbce2345d7772b0674a318d5'] = '5';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_8f14e45fceea167a5a36dedd4bea2543'] = '7';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_d3d9446802a44259755d38e6d163e820'] = '10';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_eefd425221c5c9e9d0d8b6e8bb7a90c4'] = 'Zapisz';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_c9cc8cce247e49bae79f15173ce97354'] = 'Zapisz';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>rzetelnyregulaminpro_630f6dc397fe74e52d5189e2c80f282b'] = 'Powrót do listy';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>configure_5a3c7fc39c4ba8f90d93955e3ef3ef7b'] = 'Moduł: Rzetelny regulamin w starej wersji jest zainstalowany - prosimy o odinstalowanie modułu';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>configure_bd908db5ccb07777ced8023dffc802f4'] = 'Linki';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>configure_6f1bf85c9ebb3c7fa26251e1e335e032'] = 'Regulamin';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>configure_c5f29bb36f9158d2e00f5d4dc213a0ff'] = 'Polityka prywatności';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>configure_ac86d9546f5625f6267b1202b2819edb'] = 'Po wprowadzeniu poniższych kodów linki będą dostępne';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>privacy_c5f29bb36f9158d2e00f5d4dc213a0ff'] = 'Polityka prywatności';
+$_MODULE['<{rzetelnyregulaminpro}prestashop>terms_6f1bf85c9ebb3c7fa26251e1e335e032'] = 'Regulamin sklepu';
