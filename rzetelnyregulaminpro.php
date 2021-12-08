@@ -207,25 +207,6 @@ class RzetelnyRegulaminPro extends Module
                     )
                 ),
                 array(
-                    'type' => 'switch',
-                    'tab' => 'widgets',
-                    'label' => $this->l('Display the widget'),
-                    'name' => 'rr_widget',
-                    'is_bool' => true,
-                    'values' => array(
-                        array(
-                            'id' => 'active_on',
-                            'value' => 1,
-                            'label' => $this->l('Yes')
-                        ),
-                        array(
-                            'id' => 'active_off',
-                            'value' => 0,
-                            'label' => $this->l('No')
-                        )
-                    )
-                ),
-                array(
                     'type' => 'select',
                     'tab' => 'widgets',
                     'label' => $this->l('The location of the widget'),
@@ -371,25 +352,6 @@ class RzetelnyRegulaminPro extends Module
                         ),
                         'id' => 'id',
                         'name' => 'name'
-                    )
-                ),
-                array(
-                    'type' => 'switch',
-                    'tab' => 'comments',
-                    'label' => $this->l('Show comments on product page'),
-                    'name' => 'rr_product_comments',
-                    'class' => 'col-md-3',
-                    'values' => array(
-                        array(
-                            'id' => 'active_on',
-                            'value' => 1,
-                            'label' => $this->l('Yes')
-                        ),
-                        array(
-                            'id' => 'active_off',
-                            'value' => 0,
-                            'label' => $this->l('No')
-                        )
                     )
                 ),
             ),
@@ -658,18 +620,16 @@ class RzetelnyRegulaminPro extends Module
 
     public function hookDisplayHome($params)
     {
-        if (Configuration::get('rr_home_comments')) {
-            if (Configuration::get('rr_home_comments')) {
-                $this->context->smarty->assign('rr_home_comments', Configuration::get('rr_home_comments'));
-                return $this->display(__FILE__, 'home.tpl');
-            }
+        if (Configuration::get('rr_user_code_'.$this->context->language->id) != '') {
+            $this->context->smarty->assign('rr_user_code', Configuration::get('rr_user_code_'.$this->context->language->id));
+            return $this->display(__FILE__, 'home.tpl');
         }
     }
 
     public function displayColumn()
     {
-        if (Configuration::get('rr_home_comments')) {
-            $this->context->smarty->assign('rr_home_comments', Configuration::get('rr_home_comments'));
+        if (Configuration::get('rr_user_code_'.$this->context->language->id) != '') {
+            $this->context->smarty->assign('rr_user_code', Configuration::get('rr_user_code_'.$this->context->language->id));
             return $this->display(__FILE__, 'column.tpl');
         }
     }
@@ -677,10 +637,7 @@ class RzetelnyRegulaminPro extends Module
     public function hookLeftColumn($params)
     {
         if (Configuration::get('rr_column_widget') == 'left') {
-            if (Configuration::get('rr_home_comments')) {
-                $this->context->smarty->assign('rr_home_comments', Configuration::get('rr_home_comments'));
-                return $this->displayColumn();
-            }
+            return $this->displayColumn();
         }
     }
 
@@ -693,9 +650,9 @@ class RzetelnyRegulaminPro extends Module
 
     public function hookDisplayFooterProduct($params)
     {
-        if (Configuration::get('rr_product_comments')) {
+        if (Configuration::get('rr_user_code_'.$this->context->language->id) != '') {
             if (Configuration::get('rr_home_comments')) {
-                $this->context->smarty->assign('rr_home_comments', Configuration::get('rr_home_comments'));
+                $this->context->smarty->assign('rr_user_code', Configuration::get('rr_user_code_'.$this->context->language->id));
                 return $this->display(__FILE__, 'product_footer.tpl');
             }
         }
@@ -710,7 +667,7 @@ class RzetelnyRegulaminPro extends Module
     public function sendOrder($order_id)
     {
         $sql = 'SELECT count(*) FROM `'._DB_PREFIX_.'order_rzetelny` WHERE id_order = '.(int)$order_id;
-        $sended = (int)Db::getInstance()->getValue($sql);
+        $sended = !(int)Db::getInstance()->getValue($sql);
         $order_states = explode(',', Configuration::get('rr_order_states'));
         if (is_array($order_states) && sizeof($order_states) && !$sended) {
             if (Configuration::get('rr_user_rrid') != '') {
